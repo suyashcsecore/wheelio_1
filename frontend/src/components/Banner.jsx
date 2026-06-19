@@ -23,7 +23,7 @@ const Banner = () => {
             whileTap={{scale: 0.95}}
             onClick={() => {
               navigate('/cars'); scrollTo(0, 0)
-            }} className='px-6 py-2 bg-white hover:bg-slate-200 transition-all text-primary rounded-lg text-sm mt-4 cursor-pointer'>List you car</motion.button>
+            }} className='px-6 py-2 bg-white hover:bg-slate-200 transition-all text-primary rounded-lg text-sm mt-4 cursor-pointer animate-bounce'>List you car</motion.button>
         </div>
 
         <motion.img 

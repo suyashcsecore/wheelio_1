@@ -3,6 +3,7 @@ import { assets, dummyCarData } from '../../assets/assets'
 import Title from '../../components/owner/Title'
 import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast'
+import { motion } from 'motion/react'
 
 const ManageCars = () => {
 
@@ -67,7 +68,7 @@ const ManageCars = () => {
 
   return (
     <div className='px-4 pt-10 md:px-10 w-full'>
-      <Title title='Manage Cars' subTitle='View all listed cars, update their details, or remove them from the booking platform.'/>
+      <Title title='Manage Cars' subTitle='Easily manage listed cars by viewing, updating details, or removing them from the platform.'/>
 
       <div className='max-w-3xl w-full rounded-md overflow-hidden border border-borderColor mt-6'>
         <table className='w-full border-collapse text-left text-sm text-gray-600'>
@@ -107,9 +108,9 @@ const ManageCars = () => {
                 </td>
 
                 <td className='flex items-center p-3'>
-                  <img onClick={() => toggleAvailability(car._id)} src={car.isAvailable ? assets.eye_close_icon : assets.eye_icon} alt="" className='cursor-pointer'/>
+                  <motion.img whileHover={{scale: 1.2}} onClick={() => toggleAvailability(car._id)} src={car.isAvailable ? assets.eye_close_icon : assets.eye_icon} alt="" className='cursor-pointer'/>
 
-                  <img onClick={() => deleteCar(car._id)} src={assets.delete_icon} alt="" className='cursor-pointer'/>
+                  <motion.img whileHover={{scale: 1.2}} onClick={() => deleteCar(car._id)} src={assets.delete_icon} alt="" className='cursor-pointer'/>
                 </td>
               </tr>
             ))}

@@ -2,6 +2,7 @@ import React from 'react'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
+import { motion } from 'motion/react';
 
 const NavbarOwner = () => {
 
@@ -10,7 +11,7 @@ const NavbarOwner = () => {
   return (
     <div className='flex items-center justify-between px-6 md:px-10 py-4 text-gray-500 border-b border-borderColor relative transition-all'>
         <Link to='/'>
-            <img src={assets.logo1} alt="" className='h-7'/>
+            <motion.img whileHover={{scale: 1.1}} src={assets.logo1} alt="" className='h-7'/>
         </Link>
         <p>Welcome, {user?.name || "Owner"}</p>
     </div>

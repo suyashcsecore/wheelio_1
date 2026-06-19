@@ -3,6 +3,7 @@ import { assets, dummyDashboardData } from '../../assets/assets'
 import Title from '../../components/owner/Title'
 import { useAppContext } from '../../context/AppContext'
 import toast from 'react-hot-toast'
+import { motion } from 'motion/react'
 
 const Dashboard = () => {
 
@@ -48,11 +49,11 @@ const Dashboard = () => {
 
   return (
     <div className='px-4 pt-10 md:px-10 flex-1'>
-      <Title title='Admin Dashboard' subTitle='Monitor overall platform performance including total cars, bookings, revenue, and recent activities'/>
+      <Title title='Admin Dashboard' subTitle='Get a complete overview of platform performance, including cars, bookings, revenue, and latest activities.'/>
 
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 max-w-3xl'>
         {dashboardCards.map((card, index) => (
-          <div key={index} className='flex gap-2 items-center justify-between p-4 rounded-md border border-borderColor'>
+          <motion.div whileHover={{scale: 1.02}} key={index} className='flex gap-2 items-center justify-between p-4 rounded-md border border-borderColor'>
             <div>
               <h1 className='text-xs text-gray-500'>{card.title}</h1>
               <p className='text-lg font-semibold'>{card.value}</p>
@@ -62,7 +63,7 @@ const Dashboard = () => {
               <img src={card.icon} alt="" className='h-4 w-4'/>
             </div>
 
-          </div>
+          </motion.div>
         ))}
       </div>
 
@@ -96,11 +97,11 @@ const Dashboard = () => {
         </div>
 
         {/* Monthly Revenue */}
-        <div className='p-4 md:p-6 mb-6 border border-borderColor rounded-md w-full md:max-w-xs'>
+        <motion.div whileHover={{scale: 1.02}} className='p-4 md:p-6 mb-6 border border-borderColor rounded-md w-full md:max-w-xs'>
           <h1 className='text-lg font-medium'>Monthly Revenue</h1>
           <p className='text-gray-500'>Revenue for current month</p>
           <p className='text-3xl mt-6 font-semibold text-primary'>{currency}{data.monthlyRevenue}</p>
-        </div>
+        </motion.div>
 
       </div>
 

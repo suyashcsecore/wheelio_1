@@ -54,7 +54,7 @@ import car_image99 from "./car_image99.png"
 import car_image10 from "./car_image10.png"
 import car_image666 from "./car_image666.avif"
 
-export const cityList = ['New York', 'Los Angeles', 'Houston', 'Chicago']
+export const cityList = ["Agra","Ahmedabad","Ajmer","Aligarh","Allahabad","Amritsar","Aurangabad","Bareilly","Belgaum","Bengaluru","Bhopal","Bhubaneswar","Bikaner","Chandigarh","Chennai","Coimbatore","Cuttack","Dehradun","Delhi","Dhanbad","Faridabad","Ghaziabad","Goa","Gorakhpur","Guntur","Gurugram","Guwahati","Gwalior","Hubli","Hyderabad","Indore","Jabalpur","Jaipur","Jalandhar","Jammu","Jamshedpur","Jhansi","Jodhpur","Kanpur","Kochi","Kolhapur","Kolkata","Kota","Kozhikode","Lucknow","Ludhiana","Madurai","Mangalore","Meerut","Moradabad","Mumbai","Mysuru","Nagpur","Nashik","Noida","Patna","Prayagraj","Pune","Raipur","Rajkot","Ranchi","Rourkela","Salem","Siliguri","Srinagar","Surat","Thane","Tiruchirappalli","Tirupati","Udaipur","Vadodara","Varanasi","Vijayawada","Visakhapatnam","Warangal"];
 
 export const assets = {
     logo,

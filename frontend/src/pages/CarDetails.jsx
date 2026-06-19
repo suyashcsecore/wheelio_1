@@ -49,10 +49,10 @@ const CarDetails = () => {
 
   return car ?  (
     <div className='px-6 md:px-16 lg:px-24 xl:px-32 mt-16'>
-      <button onClick={() => navigate(-1)} className='flex items-center gap-2 mb-6 text-gray-500 cursor-pointer'>
+      <motion.button whileHover={{scale: 1.2}} onClick={() => navigate(-1)} className='flex items-center gap-2 mb-6 text-gray-500 cursor-pointer'>
         <img src={assets.arrow_icon} alt="" className='rotate-180 opacity-65'/>
         Back to all cars
-        </button>
+        </motion.button>
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12'>
           {/* Left: Car Image & Details */}
@@ -65,6 +65,7 @@ const CarDetails = () => {
             initial={{scale: 0.98, opacity: 0}}
             animate={{scale: 1, opacity: 1}}
             transition={{duration: 0.5}}
+            whileHover={{scale: 1.02}}
             src={car.image} alt="" className='w-full h-auto md:max-h-100 object-cover rounded-xl mb-6 shadow-md'/>
             <motion.div 
             initial={{opacity: 0}}
@@ -88,6 +89,7 @@ const CarDetails = () => {
                   initial={{opacity: 0, y: 10}}
                   animate={{opacity: 1, y: 0}}
                   transition={{duration: 0.4}}
+                  whileHover={{scale: 1.06}}
                   key={text} className='flex flex-col items-center bg-light p-4 rounded-lg'>
                     <img src={icon} alt="" className='h-5 mb-2'/>
                     {text}
@@ -107,7 +109,7 @@ const CarDetails = () => {
                 <h1 className='text-xl font-medium mb-3'>Features</h1>
                 <ul className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
                   {
-                    ["360 Camera", "Bluetooth", "GPS", "Heated Seats", "Rear View Mirror"].map((item) => (
+                    ["360 Camera", "Bluetooth", "GPS", "Heated Seats", "Rear View Mirror", "Calling"].map((item) => (
                       <li key={item} className='flex items-center text-gray-500'>
                         <img src={assets.check_icon} className='h-4 mr-2' alt="" />
                         {item}
@@ -143,7 +145,7 @@ const CarDetails = () => {
                type="date" className='border border-borderColor px-3 py-2 rounded-lg' required id='return-date' min={getLocalDate()}/>
             </div> 
 
-            <button className='w-full bg-primary hover:bg-primary-dull transition-all py-3 font-medium text-white rounded-xl cursor-pointer'>Book Now</button>
+            <motion.button whileHover={{scale: 1.02}} className='w-full bg-primary hover:bg-primary-dull transition-all py-3 font-medium text-white rounded-xl cursor-pointer'>Book Now</motion.button>
 
             <p className='text-center text-sm'>No credit card required to reserve</p>
 

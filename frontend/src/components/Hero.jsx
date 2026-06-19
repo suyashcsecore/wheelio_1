@@ -33,7 +33,7 @@ const Hero = () => {
         initial={{y: 50, opacity: 0}}
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.8, delay: 0.2}}
-        className='text-4xl md:text-5xl font-semibold'>Luxury cars on Rent</motion.h1>
+        className='text-4xl md:text-5xl font-semibold'>Find your perfect Ride!</motion.h1>
 
         <motion.form 
         initial={{scale: 0.95, opacity: 0, y: 50}}
@@ -59,9 +59,9 @@ const Hero = () => {
                 </div>
             </div>
                 <motion.button 
-                whileHover={{scale: 1.05}}
+                whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.95}}
-                className='flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
+                className='flex items-center justify-center gap-1 px-10 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
                     <img src={assets.search_icon} alt="search" className='brightness-300'/>
                     Search
                 </motion.button>

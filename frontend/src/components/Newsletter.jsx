@@ -19,7 +19,7 @@ const Newsletter = () => {
             whileInView={{opacity: 1, y: 0}}
             transition={{delay: 0.3,duration: 0.5}}
             className="md:text-lg text-gray-500/70 pb-8">
-                Subscribe to get the latest offers, new arrivals, and exclusive discounts
+                Subscribe for exclusive offers, new arrivals, and special discounts.
             </motion.p>
             <motion.form 
             initial={{opacity: 0, y: 20}}

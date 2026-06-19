@@ -1,8 +1,11 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { motion } from 'motion/react' // motion
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+
+    const navigate = useNavigate()
   return (
     <motion.div 
     initial={{opacity: 0, y: 30}}
@@ -18,14 +21,15 @@ const Footer = () => {
                     <motion.img 
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
-                    transition={{duration: 0.5, delay: 0.3}}
+                    transition={{duration: 0.5, delay: 0.2}}
+                    whileHover={{scale: 1.1}}
                     src={assets.logo1} alt="logo" className='h-8 md:h-9' />
                     <motion.p 
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     transition={{duration: 0.5, delay: 0.4}}
                     className='max-w-80 mt-3'>
-                        Premium car rental service with a wide selection of luxury and everyday vehicles for all your driving needs.
+                        Reliable car rental service offering a wide range of vehicles, from everyday rides to premium experiences, for every journey.
                     </motion.p>
                     <motion.div 
                     initial={{opacity: 0}}
@@ -33,10 +37,10 @@ const Footer = () => {
                     transition={{duration: 0.5, delay: 0.5}}
                     className='flex items-center gap-3 mt-6'>
 
-                        <a href="#"><img src={assets.facebook_logo} className='w-5 h-5' alt="facebook_logo" /></a>
-                        <a href="#"><img src={assets.instagram_logo} className='w-5 h-5' alt="instagram_logo" /></a>
-                        <a href="#"><img src={assets.twitter_logo} className='w-5 h-5' alt="twitter_logo" /></a>
-                        <a href="#"><img src={assets.gmail_logo} className='w-5 h-5' alt="gmail_logo" /></a>
+                        <motion.a whileHover={{scale: 1.3}} href="https://facebook.com"><img src={assets.facebook_logo} className='w-5 h-5' alt="facebook_logo" /></motion.a>
+                        <motion.a whileHover={{scale: 1.3}} href="https://instagram.com"><img src={assets.instagram_logo} className='w-5 h-5' alt="instagram_logo" /></motion.a>
+                        <motion.a whileHover={{scale: 1.3}} href="https://x.com"><img src={assets.twitter_logo} className='w-5 h-5' alt="twitter_logo" /></motion.a>
+                        <motion.a whileHover={{scale: 1.3}} href="https://gmail.com"><img src={assets.gmail_logo} className='w-5 h-5' alt="gmail_logo" /></motion.a>
                         
                     </motion.div>
                 </div>
@@ -48,32 +52,55 @@ const Footer = () => {
                 transition={{duration: 0.6, delay: 0.4}}
                 className='flex flex-wrap justify-between w-1/2 gap-8'>
                 <div>
-                    <h2 className='text-base font-medium text-gray-800 uppercase'>Quick Links</h2>
-                    <ul className='mt-3 flex flex-col gap-1.5'>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Browse Cars</a></li>
-                        <li><a href="#">List Your Car</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
+                <h2 className='text-base font-medium text-gray-800 uppercase'>
+                    Quick Links
+                </h2>
+
+                <ul className='mt-3 flex flex-col gap-1.5'>
+                    <motion.li whileHover={{scale: 1.2}} onClick={() => {
+                        navigate('/')
+                        window.scrollTo(0, 0);
+                        }} className='cursor-pointer'>
+                        Home
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2}} onClick={() => {
+                        navigate('/cars')
+                        window.scrollTo(0, 0);
+                        }} className='cursor-pointer'>
+                        Browse Cars
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2}} onClick={() => {
+                        navigate('/my-bookings')
+                        window.scrollTo(0, 0);
+                        }} className='cursor-pointer'>
+                        List Your Car
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2}} onClick={() => {
+                        navigate('/')
+                        window.scrollTo(0, 0);
+                        }} className='cursor-pointer'>
+                        About Us
+                    </motion.li>
+                </ul>
                 </div>
 
                 <div>
                     <h2 className='text-base font-medium text-gray-800 uppercase'>Resources</h2>
                     <ul className='mt-3 flex flex-col gap-1.5'>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Insurance</a></li>
+                        <motion.li whileHover={{scale: 1.2}}><a href="#">Help Center</a></motion.li>
+                        <motion.li whileHover={{scale: 1.2}}><a href="#">Terms of Service</a></motion.li>
+                        <motion.li whileHover={{scale: 1.2}}><a href="#">Privacy Policy</a></motion.li>
+                        <motion.li whileHover={{scale: 1.2}}><a href="#">Insurance</a></motion.li>
                     </ul>
                 </div>
 
                 <div>
                     <h2 className='text-base font-medium text-gray-800 uppercase'>Contact</h2>
                     <ul className='mt-3 flex flex-col gap-1.5'>
-                        <li>1234 Luxury Drive</li>
-                        <li>San Francisco, CA 94107</li>
-                        <li>+1 278 399426</li>
-                        <li>info@example.com</li>
+                        <li>9841 Cybercity</li>
+                        <li>Mumbai, MA 94107</li>
+                        <li>+91 96961 XXXXX</li>
+                        <li>wheelio@ride.com</li>
                     </ul>
                 </div>
 
@@ -88,11 +115,11 @@ const Footer = () => {
             className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
                 <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
                 <ul className='flex items-center gap-4'>
-                    <li><a href="#">Privacy</a></li>
+                    <motion.li whileHover={{scale: 1.2}}><a href="#">Privacy</a></motion.li>
                     <li>|</li>
-                    <li><a href="#">Terms</a></li>
+                    <motion.li whileHover={{scale: 1.2}}><a href="#">Terms</a></motion.li>
                     <li>|</li>
-                    <li><a href="#">Cookies</a></li>
+                    <motion.li whileHover={{scale: 1.2}}><a href="#">Cookies</a></motion.li>
                 </ul>
             </motion.div>
         </motion.div>

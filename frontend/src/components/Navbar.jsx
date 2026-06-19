@@ -40,23 +40,24 @@ function Navbar() {
 
         <div className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-16 max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 z-50 ${location.pathname === "/" ? "bg-light" : "bg-white"} ${open ? "max-sm:translate-x-0" : "max-sm:translate-x-full"}`}>
             {menuLinks.map((link, index) => (
-                <motion.div whileHover={{scale: 1.27}}>
-                <Link key={index} to={link.path}>
+                <motion.div key={index} whileHover={{scale: 1.27}}>
+                <Link to={link.path}>
                     {link.name}
                 </Link>
                 </motion.div>
             ))}
 
-            <div className='hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56'>
-                <input type="text" className='py-1.5 w-full bg-transparent outline-none placeholder-gray-500' placeholder='Search products...'/>
-                <img src={assets.search_icon} alt="search" />
-            </div>
+            <motion.div whileHover={{scale: 1.1}} className='hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-md max-w-56'>
+                <p className="text-gray-500">
+                Drive Memories, Not Miles.
+                </p>
+            </motion.div>
 
             <div className='flex max-sm:flex-col items-start sm:items-center gap-6'>
 
-                <button onClick={() => isOwner ? navigate('/owner') : changeRole()} className='cursor-pointer'>{isOwner ? 'Dashboard' : 'List cars'}</button>
+                <motion.button whileHover={{scale: 1.2}} onClick={() => isOwner ? navigate('/owner') : changeRole()} className='cursor-pointer'>{isOwner ? 'Dashboard' : 'List cars'}</motion.button>
 
-                <button onClick={() => {user ? logout() : setShowLogin(true)}} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg'>{user ? 'Logout' : 'Login'}</button>
+                <motion.button whileHover={{scale: 1.05}} onClick={() => {user ? logout() : setShowLogin(true)}} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg'>{user ? 'Logout' : 'Login'}</motion.button>
             </div>
         </div>
 
