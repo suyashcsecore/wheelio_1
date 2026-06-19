@@ -9,7 +9,7 @@ import { motion } from 'motion/react'
 
 const Cars = () => {
 
-  // getting search params from url
+  // getting search params from url (Parameters)
   const [searchParams] = useSearchParams()
   const pickupLocation = searchParams.get('pickupLocation')
   const pickupDate = searchParams.get('pickupDate')
