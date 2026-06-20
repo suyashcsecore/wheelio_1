@@ -38,6 +38,7 @@ const Cars = () => {
       || car.transmission.toLowerCase().includes(input.toLowerCase())
       || car.location.toLowerCase().includes(input.toLowerCase())
       || car.fuel_type.toLowerCase().includes(input.toLowerCase())
+      || car.phone_no.includes(input)
     })
     setFilteredCars(filtered)
   }

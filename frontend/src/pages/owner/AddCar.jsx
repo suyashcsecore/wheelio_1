@@ -51,6 +51,7 @@ const AddCar = () => {
           fuel_type: '',
           seating_capacity: 0,
           location: '',
+          phone_no: '',
           description: ''
         })
       } else {
@@ -152,8 +153,8 @@ const AddCar = () => {
           </div>
         </div>
 
-        {/* Car Location */}
-        <div className='flex flex-col w-full'>
+        {/* Car Location and Mobile no. */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
           <div className='flex flex-col w-full'>
             <label>Location</label>
             <select onChange={(e) => setCar({...car, location: e.target.value})} value={car.location} className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none'>
@@ -238,6 +239,12 @@ const AddCar = () => {
               <option value="Visakhapatnam">Visakhapatnam</option>
               <option value="Warangal">Warangal</option>
             </select>
+          </div>
+
+
+          <div className='flex flex-col w-full'>
+            <label>Phone no. (+91)</label>
+            <input type="text" placeholder='96961XXXXX' required className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none' value={car.phone_no} onChange={(e) => setCar({...car, phone_no: e.target.value})}/>
           </div>
         </div>
 
