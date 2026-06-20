@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://via.placeholder.com/1200x300.png?text=Wheelio+Car+Rental+Platform" alt="Wheelio Banner" />
 
   <h1>🚗 Wheelio</h1>
   <p><strong>A Modern, Full-Stack Car Rental & Management Platform</strong></p>
@@ -192,12 +191,6 @@ We welcome contributions! Whether it's a bug report, a feature suggestion, or a 
 3.  **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
 4.  **Push** to the branch (`git push origin feature/AmazingFeature`).
 5.  **Open** a Pull Request.
-
----
-
-## 📝 License
-
-This project is licensed under the **ISC License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 <div align="center">
