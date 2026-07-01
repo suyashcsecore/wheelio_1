@@ -4,7 +4,7 @@ import { assets } from '../assets/assets';
 import { motion } from 'motion/react';
 
 const Testimonial = () => {
-
+    // used prebuilt UI 
     const testimonials = [
         { name: "Emma Rodriguez", 
           location: "Barcelona, Spain",
